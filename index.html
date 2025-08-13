@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mezban Restaurang</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <a href="boka-bord.html" id="book-table-btn" class="btn-outline">Boka Bord</a>
+</head>
+<body class="bg-gray-900 text-gray-200 font-serif">
+
+  <!-- Sticky Header -->
+<header>
+  <div class="header-inner">
+    <h1 id="logo">Mezban Restaurang</h1>
+    <button class="hamburger" id="hamburger" aria-label="Öppna meny">
+      <span></span>
+    </button>
+   <nav id="nav-links">
+  <a href="#menu" class="nav-link">Meny</a>
+  <a href="#gallery" class="nav-link">Galleri</a>
+  <a href="#contact" class="nav-link">Kontakt</a>
+  <a href="bookboard1.html" id="book-table-btn" class="nav-link">Boka Bord</a>
+</nav>
+  </div>
+</header>
+
+ <!-- Hero Section -->
+<section id="hero" class="relative h-screen flex items-center justify-center overflow-hidden">
+  <video autoplay loop muted playsinline class="video-bg">
+    <source src="media/Mezban_restaurang.mp4" type="video/mp4" />
+     </video>
+  
+  <div class="overlay"></div>
+  
+  <div class="hero-content text-center text-white px-6">
+    <p class="text-2xl md:text-3xl mb-4 text-amber-400 font-sans">Välkommen till</p>
+    <h2 class="text-6xl md:text-9xl font-extrabold tracking-tight mb-8">Mezban Restaurang</h2>
+    <button id="explore-menu" class="btn-outline">Utforska Menyn</button>
+     </div>
+</section>
+
+
+  <!-- About Section -->
+  <section id="about" class="py-24 sm:py-32">
+    <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+      <div class="about-text space-y-6 text-lg leading-relaxed text-gray-300">
+        <h2 class="text-5xl font-bold text-white mb-6">En Smak av Afghanistan</h2>
+        <p>Välkommen till Mezban Restaurang, en kulinarisk oas där vi stolt presenterar Afghanistans rika och mångsidiga matkultur. Vår resa började med en passion att dela med oss av de autentiska smaker som har gått i arv genom generationer.
+     Varje rätt på vår meny är tillagad med omsorg, kärlek och de finaste råvarorna, för att ge dig en oförglömlig upplevelse av gästfrihet och tradition. Kom och dela ett mål med oss.</p>
+      </div>
+      <div class="about-image"></div>
+    </div>
+  </section>
+
+  <!-- Menu Section -->
+  <section id="menu" class="py-24 sm:py-32 bg-gray-950/50">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+        <h2 class="text-5xl font-bold text-white">Vår Meny</h2>
+        <p class="text-xl text-gray-400 mt-4 max-w-2xl mx-auto">En resa genom Afghanistans mest älskade rätter, från traditionella grytor till grillade specialiteter.</p>
+      </div>
+
+      <div class="categories flex flex-wrap justify-center gap-2 mb-12 font-sans"></div>
+
+      <div class="menu-items grid md:grid-cols-2 gap-x-12 gap-y-8"></div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-24 sm:py-32">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="text-center mb-16">
+       
+        <p class="text-xl text-gray-400 mt-4 max-w-2xl mx-auto">Fångade ögonblick från vårt kök och vår restaurang.</p>
+      </div>
+      <div class="gallery grid grid-cols-2 md:grid-cols-4 gap-4"></div>
+    </div>
+  </section>
+
+  <!-- Contact/Footer Section -->
+
+  <footer id="contact" class="bg-black text-gray-400 py-20 font-sans">
+
+  <div class="flex">
+      <div>
+        <h4 class="text-2xl font-serif font-bold text-white mb-4">Mezban Restaurang</h4>
+        <p>Upplev en autentisk afghansk matresa i hjärtat av staden. <br><br> Välkommen!</p>
+     <div class="space-x-4 mt-6 social-links">
+  <a href="https://www.facebook.com/profile.php?id=61578327490805&ref=is_preview_show_ig_profile_ac" class="hover:text-white" aria-label="Facebook">
+    <i class="fab fa-facebook-f"></i> 
+  </a>
+  <a href="https://www.instagram.com/p/DNLwN_LNmSL/" class="hover:text-white" aria-label="Instagram">
+    <i class="fab fa-instagram"></i> 
+  </a>
+  <a href="#" class="hover:text-white" aria-label="TikTok">
+    <i class="fab fa-tiktok"></i> 
+  </a>
+</div>
+      </div>
+      <div>
+        <h4 class="text-2xl font-serif font-bold text-white mb-4">Kontaktinformation</h4>
+        <div class="space-y-3">
+          <p><span class="icon">📍</span> Beata Sparres Gränd 3, 165 55, Hässelby Gård - Stockholm</p>
+          <p><span class="icon">📞</span> +46 70- 742 85 39</p>
+          <p><span class="icon">✉️</span> info@mezbanrestaurangn.se</p>
+        </div>
+      </div>
+      <div>
+        <h4 class="text-2xl font-serif font-bold text-white mb-4">Öppettider</h4>
+        <div class="space-y-2">
+          <p>Måndag - Torsdag: 10:00 - 22:00</p>
+          <p>Fredag - Lördag: 10:00 - 23:00</p>
+          <p>Söndag: 11:00 - 21:00</p>
+        </div>
+      </div>
+    </div>
+    <div class="text-center mt-12 border-t border-gray-800 pt-8">
+      <p>© 2025 Mezban Restaurang skappad med ❤️ Samir.</p>
+    </div>
+  </footer>
+
+<script src="script.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Hamburger menu toggle
+  const hamburger = document.getElementById('hamburger');
+  const navLinks = document.getElementById('nav-links');
+  if (hamburger && navLinks) {
+    hamburger.addEventListener('click', function() {
+      hamburger.classList.toggle('active');
+      navLinks.classList.toggle('open');
+    });
+  }
+
+  // Smooth scroll for nav-link buttons with data-scroll
+  document.querySelectorAll('.nav-link[data-scroll]').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const sectionId = btn.getAttribute('data-scroll');
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+        // Close mobile menu after click
+        navLinks?.classList.remove('open');
+        hamburger?.classList.remove('active');
+      }
+    });
+  });
+
+  // Smooth scroll for "Utforska Menyn" button
+  const exploreMenuBtn = document.getElementById('explore-menu');
+  const menuSection = document.getElementById('menu');
+  if (exploreMenuBtn && menuSection) {
+    exploreMenuBtn.addEventListener('click', function() {
+      menuSection.scrollIntoView({ behavior: 'smooth' });
+    });
+  }
+});
+</script>
+</body>
+</html>
+

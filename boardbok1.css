@@ -1,0 +1,311 @@
+/* ==========================================================================
+   1. Global Styles
+   ========================================================================== */
+body {
+  background:
+    linear-gradient(rgba(24,24,27,0.5), rgba(24,24,27,0.5)), /* lighter overlay */
+    url('media/Logo.jpg') center center / cover no-repeat;
+  color: #e5e7eb;
+    background-attachment: fixed;
+  
+  font-family: 'Georgia', serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* ==========================================================================
+   2. Header
+   ========================================================================== */
+header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  width: 100%;
+  z-index: 1000;
+  background: #181818;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+}
+
+.header-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.75rem 2rem;
+  max-width: 1120px;
+  margin: 0 auto;
+  
+}
+
+#logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff;
+  letter-spacing: 0.08em;
+  font-family: Georgia, serif;
+ 
+}
+
+/* Hamburger Menu */
+.hamburger {
+  display: block;
+  width: 2.2rem;
+  height: 2.2rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1100;
+  padding-left: 3rem;
+}
+
+.hamburger span,
+.hamburger span::before,
+.hamburger span::after {
+  display: block;
+  position: absolute;
+  width: 2rem;
+  height: 0.22rem;
+  background: #fbbf24;
+  border-radius: 2px;
+  transition: all 0.3s;
+  left: 0.1rem;
+}
+
+.hamburger span { top: 1rem; }
+.hamburger span::before { content: ''; top: -0.6rem; }
+.hamburger span::after { content: ''; top: 0.6rem; }
+
+/* Active State */
+.hamburger.active span { background: transparent; }
+.hamburger.active span::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+.hamburger.active span::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+/* Navigation Menu */
+#nav-links {
+  display: none;
+  flex-direction: column;
+  background: #232323;
+  position: fixed;
+  top: 3.5rem;
+  left: 0;
+  width: 100%;
+  padding: 1.5rem 0;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.18);
+  z-index: 1050;
+  gap: 1.5rem;
+  text-align: center;
+}
+
+#nav-links.open { display: flex; }
+
+#nav-links a,
+#nav-links button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  font-family: inherit;
+  padding: 0.5rem 0;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+#nav-links a:hover,
+#nav-links button:hover { color: #fbbf24; }
+
+/* Desktop Navigation */
+@media (min-width: 768px) {
+  .hamburger { display: none; }
+  #nav-links {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    background: none;
+    box-shadow: none;
+    gap: 2rem;
+    align-items: center;
+    padding: 0;
+    width: auto;
+  }
+  #nav-links a,
+  #nav-links button {
+    font-size: 1.1rem;
+    color: #d1d5db;
+    padding: 0;
+  }
+}
+
+
+/* ==========================================================================
+   3. Main Section
+   ========================================================================== */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  padding-top: 4rem; /* space for fixed header */
+}
+
+section.text-center {
+  width: 100%;
+  max-width: 480px;
+  margin: 0 auto;
+  background: #27272a;
+  border-radius: 1rem;
+  box-shadow: 0 8px 32px rgba(24, 24, 27, 0.18);
+  padding: 2.5rem 2rem;
+  border: 1.5px solid #374151;
+  margin-bottom: 100px;
+}
+
+h2 {
+  color: #cdc9c0;
+  font-family: 'Georgia', serif;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+  letter-spacing: 0.04em;
+}
+
+form label {
+  color: #cdc9c0;
+  font-weight: 600;
+  font-size: 1.1rem;
+  letter-spacing: 0.02em;
+}
+
+input,
+textarea {
+  background: #18181b;
+  color: #e5e7eb;
+  border: 1.5px solid #374151;
+  border-radius: 0.5rem;
+  padding: 0.7rem;
+  font-size: 1rem;
+  margin: 0.2rem 0 1.2rem;
+  width: 100%;
+  box-sizing: border-box;
+  font-family: inherit;
+  transition: border 0.2s, box-shadow 0.2s;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: #fbbf24;
+  box-shadow: 0 0 0 2px #fbbf24;
+}
+
+.btn-outline {
+  background: transparent;
+  color: #fbbf24;
+  border: 1.5px solid #fbbf24;
+  border-radius: 0.5rem;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+  margin-top: 1rem;
+  letter-spacing: 0.03em;
+}
+
+.btn-outline:hover {
+  background: #fbbf24;
+  color: #18181b;
+}
+
+@media (max-width: 600px) {
+  section.text-center {
+    padding: 1.2rem 0.5rem;
+    max-width: 98vw;
+  }
+  h2 { font-size: 1.5rem; }
+}
+
+/* ==========================================================================
+   8. Footer
+   ========================================================================== */
+footer {
+    background-color: #000000;
+    color: #9ca3af;
+    font-family: 'Helvetica Neue', sans-serif;
+    padding: 2rem 1.5rem;
+    width: 100vw;
+   
+    
+}
+
+footer h3, footer h4 {
+    font-family: Georgia, serif;
+    color: white;
+    
+}
+
+footer .icon {
+    margin-right: 0.5rem;
+}
+
+footer a {
+    color: #9ca3af;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+footer a:hover {
+    color: #fbbf24; /* Saffron gold */
+}
+
+.text-center {
+    text-align: center;
+}
+
+.border-t {
+    border-top: 1px solid #374151; /* gray-700 */
+}
+
+.pt-8 {
+    padding-top: 2rem;
+}
+
+.mt-12 {
+    margin-top: 3rem;
+}
+
+footer > div {
+  max-width: 1200px; /* content width */
+  margin: 0 auto;    /* center it */
+  padding: 0 40px;   /* left/right space */
+}
+footer .flex {
+    gap: 3rem;           /* space between columns */
+    justify-content: space-between;
+    flex-wrap: noq  wrap;     /* responsive on small screens */
+}
+.social-links i {
+    margin-right: 0.5em;
+    font-size: 1.2em;
+    vertical-align: middle;
+}
+
+
+@media (min-width: 960px) {
+  footer .flex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;         /* Prevent wrapping */
+    gap: 3rem;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  footer .flex > div {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+}   
